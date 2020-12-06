@@ -1,0 +1,70 @@
+{
+  "kind": "collectionType",
+  "collectionName": "establishments",
+  "info": {
+    "name": "establishments",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "description": {
+      "type": "richtext",
+      "required": false
+    },
+    "image": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "files",
+        "images",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "location": {
+      "type": "string"
+    },
+    "image_showcase": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "rating": {
+      "type": "integer"
+    },
+    "distance_city": {
+      "type": "decimal"
+    },
+    "price_adult": {
+      "type": "decimal"
+    },
+    "establishment_type": {
+      "type": "string"
+    },
+    "max_guests": {
+      "type": "integer"
+    },
+    "all_inclusive": {
+      "type": "boolean"
+    }
+  }
+}

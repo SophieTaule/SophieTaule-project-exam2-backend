@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "enquires",
+  "info": {
+    "name": "enquires",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "client_name": {
+      "type": "string"
+    },
+    "subject": {
+      "type": "string"
+    },
+    "email": {
+      "type": "email"
+    },
+    "message": {
+      "type": "richtext"
+    },
+    "establishment": {
+      "type": "string"
+    }
+  }
+}
